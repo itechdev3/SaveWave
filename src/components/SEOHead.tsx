@@ -3,29 +3,14 @@ import { useEffect } from 'react';
 interface SEOHeadProps {
   title: string;
   description: string;
-  canonical?: string;
 }
 
-export default function SEOHead({ title, description, canonical }: SEOHeadProps) {
+export default function SEOHead({ title, description }: SEOHeadProps) {
   useEffect(() => {
     document.title = title;
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta');
-      metaDesc.setAttribute('name', 'description');
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.setAttribute('content', description);
-    if (canonical) {
-      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-      if (!link) {
-        link = document.createElement('link');
-        link.setAttribute('rel', 'canonical');
-        document.head.appendChild(link);
-      }
-      link.setAttribute('href', canonical);
-    }
-  }, [title, description, canonical]);
+    const meta = document.querySelector('meta[name="description"]') as HTMLMetaElement;
+    if (meta) meta.content = description;
+  }, [title, description]);
 
   return null;
 }

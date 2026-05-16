@@ -9,45 +9,32 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link to="/" className="flex items-center gap-2 text-white font-bold text-lg mb-3">
               <Zap className="w-5 h-5 text-sky-400" />
-              OnlineFileTool
+              Online File Tools
             </Link>
-            <p className="text-sm leading-relaxed">
-              Free browser-based file tools. No signup required. Works on all devices.
-            </p>
+            <p className="text-sm">Free, fast, and secure online file conversion tools.</p>
           </div>
           <div>
             <h3 className="text-white text-sm font-semibold mb-3">Image Tools</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/image-converter" className="hover:text-white transition-colors">Image Converter</Link></li>
-              <li><Link to="/image-compressor" className="hover:text-white transition-colors">Image Compressor</Link></li>
-              <li><Link to="/image-resizer" className="hover:text-white transition-colors">Image Resizer</Link></li>
-              <li><Link to="/image-cropper" className="hover:text-white transition-colors">Image Cropper</Link></li>
+              <li><Link to="/image-tools" className="hover:text-white transition-colors">All Image Tools</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-white text-sm font-semibold mb-3">Audio & PDF</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/audio-converter" className="hover:text-white transition-colors">Audio Converter</Link></li>
-              <li><Link to="/audio-compressor" className="hover:text-white transition-colors">Audio Compressor</Link></li>
-              <li><Link to="/pdf-converter" className="hover:text-white transition-colors">PDF Converter</Link></li>
-              <li><Link to="/pdf-compressor" className="hover:text-white transition-colors">PDF Compressor</Link></li>
-              <li><Link to="/pdf-merge" className="hover:text-white transition-colors">PDF Merge</Link></li>
+              <li><Link to="/audio-tools" className="hover:text-white transition-colors">Audio Tools</Link></li>
+              <li><Link to="/pdf-tools" className="hover:text-white transition-colors">PDF Tools</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-white text-sm font-semibold mb-3">More</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/downloader" className="hover:text-white transition-colors">File Downloader</Link></li>
-              <li>
-                <a href="https://t.me/onlinefiletools" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  Support (Telegram)
-                </a>
-              </li>
+              <li><Link to="/downloader" className="hover:text-white transition-colors">Downloader</Link></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 pt-6 text-sm text-center">
-          &copy; {new Date().getFullYear()} OnlineFileTool.com — All tools are free and browser-based.
+          © {new Date().getFullYear()} Online File Tools. All tools are free and browser-based.
         </div>
       </div>
     </footer>
